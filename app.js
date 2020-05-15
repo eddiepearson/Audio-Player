@@ -3,7 +3,7 @@ const artistName = document.querySelector('.artist-name');
 const track1 = document.querySelector('#song1');
 const track2 = document.querySelector('#song2');
 const track3 = document.querySelector('#song3');
-const playButton = document.querySelector('.play');
+const button1 = document.querySelector('#key1');
 
 const songs = {
     song1: {
@@ -25,6 +25,11 @@ const songs = {
     },
 };
 
-playButton.addEventListener('click', function () {
-    track1.play();
+button1.addEventListener('keyDown', function () {
+    if (track1.paused) {
+        track1.play();
+        songTitle.innerHTML = songs.song1.title;
+    } else
+        track1.pause();
 });
+

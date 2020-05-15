@@ -81,6 +81,10 @@ img {
     letter-spacing: 0.1em;
 }
 
+.artist-name {
+    margin: 1em 0 1em 0;
+}
+
 .material-icons {
     color: rgb(66, 66, 66);
 }
@@ -156,4 +160,19 @@ img {
     margin: 0 1em 0 1em;
     box-shadow: 7px 7px 0 0 rgba(19, 19, 19, 0.15);
 }
+
+.pressed {
+    animation: shadow-pulse 1s infinite;
+}
+
+@keyframes shadow-pulse
+{
+     0% {
+          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+     }
+     100% {
+          box-shadow: 0 0 0 35px rgba(0, 0, 0, 0);
+     }
+}
+
 
